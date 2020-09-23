@@ -2,11 +2,14 @@ package com.hs.mail.container.server.socket;
 import com.thoughtworks.xstream.XStream;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.io.IOException;
+
 public class TestDefaultServerSocketFactoryPanktiGen {
     static XStream xStream = new XStream();
 
     @Test
-    public void testCreateServerSocket1() {
+    public void testCreateServerSocket1() throws IOException {
         String receivingXML = 
         "<com.hs.mail.container.server.socket.DefaultServerSocketFactory/>";
         com.hs.mail.container.server.socket.DefaultServerSocketFactory receivingObject = (com.hs.mail.container.server.socket.DefaultServerSocketFactory) xStream.fromXML(receivingXML);
@@ -62,7 +65,7 @@ public class TestDefaultServerSocketFactoryPanktiGen {
     }
 
     @Test
-    public void testCreateServerSocket2() {
+    public void testCreateServerSocket2() throws IOException {
         String receivingXML = 
         "<com.hs.mail.container.server.socket.DefaultServerSocketFactory/>";
         com.hs.mail.container.server.socket.DefaultServerSocketFactory receivingObject = (com.hs.mail.container.server.socket.DefaultServerSocketFactory) xStream.fromXML(receivingXML);

@@ -1,14 +1,17 @@
 package com.hs.mail.imap.processor.fetch;
 import com.thoughtworks.xstream.XStream;
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
+
+import org.apache.james.mime4j.MimeException;
 import org.junit.Assert;
 import org.junit.Test;
 public class TestBodyStructureBuilderPanktiGen {
     static XStream xStream = new XStream();
 
     @Test
-    public void testBuild1() {
+    public void testBuild1() throws IOException, MimeException {
         String receivingXML = 
         "<com.hs.mail.imap.processor.fetch.BodyStructureBuilder>" +
         "  <envelopeBuilder/>" +
@@ -115,7 +118,7 @@ public class TestBodyStructureBuilderPanktiGen {
     }
 
     @Test
-    public void testBuild4() {
+    public void testBuild4() throws IOException, MimeException {
         String receivingXML = 
         "<com.hs.mail.imap.processor.fetch.BodyStructureBuilder>" +
         "  <envelopeBuilder/>" +

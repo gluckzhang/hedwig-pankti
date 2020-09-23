@@ -2,11 +2,14 @@ package com.hs.mail.container.server.socket;
 import com.thoughtworks.xstream.XStream;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.io.IOException;
+
 public class TestTcpSocketChannelPanktiGen {
     static XStream xStream = new XStream();
 
     @Test
-    public void testGetInputStream1() {
+    public void testGetInputStream1() throws IOException {
         String receivingXML = 
         "<com.hs.mail.container.server.socket.TcpSocketChannel>" +
         "  <socket>" +
@@ -118,7 +121,7 @@ public class TestTcpSocketChannelPanktiGen {
     }
 
     @Test
-    public void testGetInputStream2() {
+    public void testGetInputStream2() throws IOException {
         String receivingXML = 
         "<com.hs.mail.container.server.socket.TcpSocketChannel>" +
         "  <socket>" +
@@ -230,7 +233,7 @@ public class TestTcpSocketChannelPanktiGen {
     }
 
     @Test
-    public void testGetOutputStream1() {
+    public void testGetOutputStream1() throws IOException {
         String receivingXML = 
         "<com.hs.mail.container.server.socket.TcpSocketChannel>" +
         "  <socket>" +
@@ -364,7 +367,7 @@ public class TestTcpSocketChannelPanktiGen {
     }
 
     @Test
-    public void testGetOutputStream2() {
+    public void testGetOutputStream2() throws IOException {
         String receivingXML = 
         "<com.hs.mail.container.server.socket.TcpSocketChannel>" +
         "  <socket>" +
